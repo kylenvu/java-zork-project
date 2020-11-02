@@ -1,0 +1,50 @@
+s
+e
+open window
+w
+take lit lamp
+u
+take rusty key
+d
+e
+e
+unlock rusty chest with rusty key
+open rusty chest
+take ornate key
+take golden egg
+sw
+w
+w
+unlock ornate chest with ornate key
+open ornate chest
+take long sword
+e
+e
+n
+open door
+n
+attack troll with long sword
+s
+e
+w
+w
+open grate
+d
+e
+e
+attack grue with long sword
+d
+take silver key
+w
+w
+w
+u
+e
+e
+s
+w
+w
+nw
+unlock silver chest with silver key
+open silver chest with silver key
+take crystal skull
