@@ -98,6 +98,7 @@ public class MazeGame implements Directions {
 
         northOfHouse.setSide(Direction.NORTH, trollRoom);
 
+        forest1.setSide(Direction.EAST, westOfHouse);
         forest1.setSide(Direction.SOUTH, forest3);
         forest1.setSide(Direction.NORTH, forest1);
         forest1.setSide(Direction.NW, finalRoom);
