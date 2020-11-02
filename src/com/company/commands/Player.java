@@ -61,7 +61,6 @@ public class Player extends Entity implements Directions {
         if (hitPoints > MAX_HIT_POINTS) hitPoints = (int)MAX_HIT_POINTS;
     }
 
-//    public int getDamage() { return damageDealt; }
     public boolean getHasLight() {
         for (Map.Entry<String, Item> entry : inventory.entrySet()) {
             if (entry.getValue() instanceof Light) {
@@ -76,10 +75,8 @@ public class Player extends Entity implements Directions {
     public int getNumOfMoves() { return numOfMoves; }
 
     public String damageMessage() {
-//        final double EPSILON = 1e-7;
         double currentHP = hitPoints;
         String message;
-//        System.out.println("Current HP: " + currentHP);
         if (currentHP == 10) message = "You are healthy.";
         else if (currentHP >= 7) message = "You are relatively healthy.";
         else if (currentHP >= 5) message = "You are moderately wounded.";
@@ -114,7 +111,6 @@ public class Player extends Entity implements Directions {
         } else {
             System.out.printf("There is no %s in this room.\n", enemyName);
         }
-
     }
     public void attack(String enemyName, String itemName) {
         if (inventory.containsKey(itemName)) {
@@ -348,6 +344,8 @@ public class Player extends Entity implements Directions {
                             Item theItem = entry.getValue().getInsideOfItem().get(word);
                             if (theItem.getScore() > 0) {
                                 increaseScore(theItem.getScore());
+                                System.out.println(theItem.take());
+                                entry.getValue().getInsideOfItem().get(word);
                             } else if (numOfItems < MAX_INVENTORY) {
                                 if (theItem.getCanPickUp()) {
                                     ++numOfItems;
